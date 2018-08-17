@@ -1,0 +1,31 @@
+//
+//  LSJPrefixHeader.pch
+//  LSJ
+//
+//  Created by 周鑫 on 2018/8/17.
+//  Copyright © 2018年 ZX. All rights reserved.
+//
+
+#ifndef LSJPrefixHeader_pch
+#define LSJPrefixHeader_pch
+
+#pragma mark - The three parties
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND
+// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#define MAS_SHORTHAND_GLOBALS
+#pragma mark - H file
+#import <Masonry/Masonry.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+#import <YYCache/YYCache.h>
+#import <JKCategories/JKCategories.h>
+
+
+
+#import "CommonDefine.h"
+#import "AudioManager.h"
+#import "UIViewController+HUD.h"
+#import "CommonEnum.h"
+#endif /* LSJPrefixHeader_pch */

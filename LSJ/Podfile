@@ -1,0 +1,20 @@
+platform :ios, '9.0'  # 指定平台与版本
+inhibit_all_warnings!  # 全局禁止显示警告
+target 'LSJ' do
+
+pod 'Masonry'
+pod 'MJExtension'
+pod 'FSCalendar'
+pod 'IQKeyboardManager'
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'JKCategories'
+pod 'WMPageController'
+pod 'DZNEmptyDataSet'
+pod 'JPush'
+pod 'YYCache'
+pod 'SVProgressHUD'
+
+end
