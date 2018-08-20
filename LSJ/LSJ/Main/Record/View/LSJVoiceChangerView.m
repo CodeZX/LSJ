@@ -50,13 +50,15 @@ static NSString *identifier = @"LSJVoiceChangerCollectionViewCell";
     [self.collectionView registerClass:[LSJVoiceChangerCollectionViewCell class] forCellWithReuseIdentifier:identifier];
     
     
-    UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    UIButton *closeBtn = [[UIButton alloc]init];
+    [closeBtn setImage:[UIImage imageNamed:@"关 闭-2"] forState:UIControlStateNormal];
     [self addSubview:closeBtn];
     self.closeBtn = closeBtn;
     [closeBtn addTarget:self action:@selector(closeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(-10);
         make.top.equalTo(10);
+        make.size.equalTo(CGSizeMake(20, 20));
     }];
     
     

@@ -11,6 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import "collectionHeaderView.h"
 #import "AudioModel.h"
+
+
+#import "SoundTouchOperation.h"
+//#import "SoundTouch.h"
 //#import "XTJWebNavigationViewController.h"
 
 
@@ -19,7 +23,10 @@ static NSString* const collectionViewHeaderIdentifier = @"header";
 static NSString *audioPath = @"QLCP";
 
 
-@interface GramophoneViewControllerTwo ()<UICollectionViewDelegate,UICollectionViewDataSource,AVAudioPlayerDelegate,GramophoneViewControllerCellTwoDelegate>
+@interface GramophoneViewControllerTwo ()<UICollectionViewDelegate,UICollectionViewDataSource,AVAudioPlayerDelegate,GramophoneViewControllerCellTwoDelegate> {
+    
+    NSOperationQueue *soundTouchQueue;
+}
 @property (nonatomic,strong) NSMutableArray *dataSource;
 @property (nonatomic,weak) UICollectionView *collectionView;
 @property (nonatomic,weak) UIImageView *headImageView; ;
@@ -35,6 +42,11 @@ static NSString *audioPath = @"QLCP";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+  
+    soundTouchQueue = [[NSOperationQueue alloc]init];
+    soundTouchQueue.maxConcurrentOperationCount = 1;
+
     [self setupUI];
 //    [self netWork];
 }
@@ -72,7 +84,7 @@ static NSString *audioPath = @"QLCP";
     [self.tabBarController.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBarController.tabBar setShadowImage:[UIImage new]];
     
-    
+     [self.collectionView.mj_header beginRefreshing];
 }
 
 
@@ -102,7 +114,7 @@ static NSString *audioPath = @"QLCP";
     
     self.collectionView.mj_header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.collectionView.mj_header.automaticallyChangeAlpha = YES;
-    [self.collectionView.mj_header beginRefreshing];
+   
 }
 
 #pragma mark -------------------------- means ----------------------------------------
@@ -244,10 +256,12 @@ static NSString *audioPath = @"QLCP";
 //    }
     NSString *audioPath = [self fullPathAtDocument:model.date];
     if ([[NSFileManager defaultManager] fileExistsAtPath:audioPath]) {
-        self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:audioPath] error:nil];
-        self.player.delegate = self;
-        [self.player play];
+//        self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:audioPath] error:nil];
+//        self.player.delegate = self;
+//        [self.player play];
         [cell startAnimation];
+        
+        [self createSoundTouchOperationWithPath:audioPath audio:model];
     }else {
         [self showToast:@"文件获取失败！"];
     }
@@ -257,7 +271,91 @@ static NSString *audioPath = @"QLCP";
 //    [self.player play];
 //    [cell startAnimation];
 
+}
+
+- (void)createSoundTouchOperationWithPath:(NSString *)filePath audio:(AudioModel *)audioModel {
     
+    
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    MySountTouchConfig config;
+    switch (audioModel.voiceType) {
+        case VoiceTypeDefault:{
+            // 原生
+            config.sampleRate = 8000;
+            config.tempoChange = 0;
+            config.pitch = 0;
+            config.rate = 0;
+             break;
+        }
+        case VoiceTypeBoy: {
+            
+            // 正太
+            config.sampleRate = 8000;
+            config.tempoChange = 51;
+            config.pitch = 3;
+            config.rate = -11;
+            break;
+        }
+        case VoiceTypeGirl: {
+            // 萝莉
+            config.sampleRate = 8000;
+            config.tempoChange = -31;
+            config.pitch = 6;
+            config.rate = 76;
+            
+            break;
+        }
+        case VoiceTypeMan: {
+            
+            // 男生
+            config.sampleRate = 8000;
+            config.tempoChange = 0;
+            config.pitch = -6;
+            config.rate = 0;
+            break;
+            
+        }
+        case VoiceTypeWoman: {
+            
+            // 女生
+            config.sampleRate = 8000;
+            config.tempoChange = 0;
+            config.pitch = 6;
+            config.rate = 0;
+            break;
+        }
+        case VoiceTypeOldman: {
+            
+            // 老的
+            config.sampleRate = 8000;
+            config.tempoChange = 10;
+            config.pitch = -10;
+            config.rate = -10;
+        }
+            
+        default:
+            break;
+    }
+   
+    config.sampleRate = 8000;
+    config.tempoChange = 0;
+    config.pitch = 6;
+    config.rate = 0;
+
+    SoundTouchOperation *manSTO = [[SoundTouchOperation alloc]initWithTarget:self action:@selector(SoundTouchFinish:) SoundTouchConfig:config soundFile:data];
+
+    
+    [soundTouchQueue cancelAllOperations];
+    [soundTouchQueue addOperation:manSTO];
+}
+
+- (void)SoundTouchFinish:(NSString *)path {
+    
+        self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+        self.player.delegate = self;
+        [self.player play];
+//        [cell startAnimation];
+
     
 }
 

@@ -11,13 +11,9 @@
 
 typedef NS_ENUM(NSUInteger, VoiceType) {
     VoiceTypeDefault,
-    VoiceTypeGirl,
-    VoiceTypeLady,
-    VoiceTypePanic,
-    VoiceTypeDeep,
-    VoiceTypeMan,
-    VoiceTypeFunny,
     VoiceTypeBoy,
+    VoiceTypeGirl,
+    VoiceTypeMan,
     VoiceTypeWoman,
     VoiceTypeOldman
     

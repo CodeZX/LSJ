@@ -101,6 +101,7 @@
 		3C10091A2126B94B00940BFD /* LSJVoiceChangerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1009192126B94B00940BFD /* LSJVoiceChangerView.m */; };
 		3C10091D2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091C2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m */; };
 		3C1009202126C63600940BFD /* VoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091F2126C63500940BFD /* VoiceModel.m */; };
+		3C100945212A5E4B00940BFD /* 关 闭-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C100944212A5E4B00940BFD /* 关 闭-2.png */; };
 		EDABAC70E6601ECA45EBAD56 /* libPods-LSJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C2D43D7186277E2E28166 /* libPods-LSJ.a */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +243,7 @@
 		3C10091E2126C63500940BFD /* VoiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceModel.h; sourceTree = "<group>"; };
 		3C10091F2126C63500940BFD /* VoiceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceModel.m; sourceTree = "<group>"; };
 		3C1009212126CA9B00940BFD /* CommonEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
+		3C100944212A5E4B00940BFD /* 关 闭-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关 闭-2.png"; sourceTree = "<group>"; };
 		848C2D43D7186277E2E28166 /* libPods-LSJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20184D360B63A3435505D7B /* Pods-LSJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSJ/Pods-LSJ.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3B9B713D18619F1D0F346C /* Pods-LSJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSJ/Pods-LSJ.release.xcconfig"; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 		3C1008BF2126A64100940BFD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3C100944212A5E4B00940BFD /* 关 闭-2.png */,
 				3C1008C02126A64100940BFD /* btn_stop@3x.png */,
 				3C1008C12126A64100940BFD /* disc@2x.png */,
 				3C1008C22126A64100940BFD /* disc.png */,
@@ -734,6 +737,7 @@
 				3C1008A721269C6900940BFD /* icon_delete.png in Resources */,
 				3C10089221269C6900940BFD /* bg1@3x.png in Resources */,
 				3C10089521269C6900940BFD /* icon_phonograph@2x.png in Resources */,
+				3C100945212A5E4B00940BFD /* 关 闭-2.png in Resources */,
 				3C1008A121269C6900940BFD /* bg1.png in Resources */,
 				3C1008A621269C6900940BFD /* icon_disc.png in Resources */,
 				3C1008D12126A64100940BFD /* disc.png in Resources */,
@@ -1015,9 +1019,10 @@
 			baseConfigurationReference = D20184D360B63A3435505D7B /* Pods-LSJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JNF86A6DCM;
+				DEVELOPMENT_TEAM = JT8233YUV4;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PREFIX_HEADER = /Users/jinshengguan/Desktop/TJ/LSJ/LSJ/LSJ/Resource/LSJPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LSJ/Resource/Info.plist";
@@ -1028,7 +1033,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zx.LSJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1037,9 +1042,10 @@
 			baseConfigurationReference = FD3B9B713D18619F1D0F346C /* Pods-LSJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JNF86A6DCM;
+				DEVELOPMENT_TEAM = JT8233YUV4;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PREFIX_HEADER = /Users/jinshengguan/Desktop/TJ/LSJ/LSJ/LSJ/Resource/LSJPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LSJ/Resource/Info.plist";
@@ -1050,7 +1056,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zx.LSJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

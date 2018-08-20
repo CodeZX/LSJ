@@ -179,15 +179,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 #pragma mark -------------------------- LSJVoiceChangerViewDelegate ----------------------------------------
 - (void)voiceChangerView:(LSJVoiceChangerView *)voiceChangerView didCloseBtnClicked:(UIButton *)Closebtn {
     
-    [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        CGFloat X = 15;
-        CGFloat Y = SCREEN_HEIGHT;
-        CGFloat W = SCREEN_WIDTH - 30;
-        CGFloat H = 200;
-        self.voiceChangerView.frame = CGRectMake(X, Y, W, H);
-    } completion:^(BOOL finished) {
-        
-    }];
+    [self hideVoiceChangerView];
     
     
 }
@@ -196,6 +188,12 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     
     
     self.voiceType = voiceType;
+    [self hideVoiceChangerView];
+    
+}
+
+- (void)hideVoiceChangerView {
+   
     [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         CGFloat X = 15;
         CGFloat Y = SCREEN_HEIGHT;
@@ -203,6 +201,28 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         CGFloat H = 200;
         self.voiceChangerView.frame = CGRectMake(X, Y, W, H);
     } completion:^(BOOL finished) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置密码和密码" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *unPasswordAction = [UIAlertAction actionWithTitle:@"不设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   [self saveAudioWithPassWord:nil Title:nil];
+                }];
+                UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        [self saveAudioWithPassWord:self.passworkTextField.text Title:self.titleTextField.text];
+                }];
+        //        confirmAction.enabled = NO;
+                [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+                    textField.placeholder = @"标题";
+                    self.titleTextField = textField;
+                }];
+                [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+                    textField.placeholder = @"密码";
+                    self.passworkTextField = textField;
+                }];
+        
+                [alert addAction:unPasswordAction];
+                [alert addAction:confirmAction];
+        //
+                [self presentViewController:alert animated:YES completion:^{}];
         
     }];
     
@@ -325,27 +345,37 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     
     [self hideSaveBtnAndCancelBtn:^(BOOL finished) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置密码和密码" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *unPasswordAction = [UIAlertAction actionWithTitle:@"不设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-           [self saveAudioWithPassWord:nil Title:nil];
-        }];
-        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [self saveAudioWithPassWord:self.passworkTextField.text Title:self.titleTextField.text];
-        }];
-//        confirmAction.enabled = NO;
-        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            textField.placeholder = @"标题";
-            self.titleTextField = textField;
-        }];
-        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            textField.placeholder = @"密码";
-            self.passworkTextField = textField;
-        }];
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置密码和密码" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *unPasswordAction = [UIAlertAction actionWithTitle:@"不设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//           [self saveAudioWithPassWord:nil Title:nil];
+//        }];
+//        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//                [self saveAudioWithPassWord:self.passworkTextField.text Title:self.titleTextField.text];
+//        }];
+////        confirmAction.enabled = NO;
+//        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//            textField.placeholder = @"标题";
+//            self.titleTextField = textField;
+//        }];
+//        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//            textField.placeholder = @"密码";
+//            self.passworkTextField = textField;
+//        }];
+//
+//        [alert addAction:unPasswordAction];
+//        [alert addAction:confirmAction];
+////
+//        [self presentViewController:alert animated:YES completion:^{}];
         
-        [alert addAction:unPasswordAction];
-        [alert addAction:confirmAction];
-        
-        [self presentViewController:alert animated:YES completion:^{}];
+        [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            CGFloat X = 15;
+            CGFloat Y = SCREEN_HEIGHT/2 - 100;
+            CGFloat W = SCREEN_WIDTH - 30;
+            CGFloat H = 200;
+            self.voiceChangerView.frame = CGRectMake(X, Y, W, H);
+        } completion:^(BOOL finished) {
+            
+        }];
     
     }];
 }
@@ -366,28 +396,20 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 
 - (void)startBtnClick:(UIButton *)btn {
     
-    [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.8 initialSpringVelocity:.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        CGFloat X = 15;
-        CGFloat Y = SCREEN_HEIGHT/2 - 100;
-        CGFloat W = SCREEN_WIDTH - 30;
-        CGFloat H = 200;
-        self.voiceChangerView.frame = CGRectMake(X, Y, W, H);
-    } completion:^(BOOL finished) {
-        
-    }];
+   
     
-//    if (self.audioState == AudioStateEnd) {
-//        [self startRecord];
-//        btn.selected = YES;
-//        self.audioState = AudioStateMarch;
-//
-//    }else if(self.audioState == AudioStateMarch){
-//        [self.recordView commitRecording];
-//        [self showSaveBtnAndCancelBtn];
-//        btn.selected = NO;
-//        self.audioState = AudioStateEnd;
-//
-//    }
+    if (self.audioState == AudioStateEnd) {
+        [self startRecord];
+        btn.selected = YES;
+        self.audioState = AudioStateMarch;
+
+    }else if(self.audioState == AudioStateMarch){
+        [self.recordView commitRecording];
+        [self showSaveBtnAndCancelBtn];
+        btn.selected = NO;
+        self.audioState = AudioStateEnd;
+
+    }
 
     
 }

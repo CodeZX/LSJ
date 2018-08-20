@@ -53,7 +53,7 @@ static NSString *audioPath = @"QLCP";
     [self.tabBarController.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBarController.tabBar setShadowImage:[UIImage new]];
     
-    
+     [self.collectionView.mj_header beginRefreshing];
 }
 
 
@@ -83,7 +83,7 @@ static NSString *audioPath = @"QLCP";
     
     self.collectionView.mj_header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.collectionView.mj_header.automaticallyChangeAlpha = YES;
-    [self.collectionView.mj_header beginRefreshing];
+//    [self.collectionView.mj_header beginRefreshing];
 }
 
 #pragma mark -------------------------- means ----------------------------------------
