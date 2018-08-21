@@ -91,7 +91,7 @@ static NSString *audioPath = @"QLCP";
 - (void)setupUI  {
     
     self.view.backgroundColor = WhiteColor;
-    self.navigationItem.title = @"留声机";
+    self.navigationItem.title = @"Gramophone";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self  action:@selector(rightSearch:)];
     
@@ -364,10 +364,10 @@ static NSString *audioPath = @"QLCP";
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         collectionHeaderView* view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:collectionViewHeaderIdentifier forIndexPath:indexPath];
         if (indexPath.section == 0) {
-            view.label.text = @"今天";
+            view.label.text = @"Today";
         } else {
             
-            view.label.text = @"其他";
+            view.label.text = @"Other";
         }
         return view;
     }else{
@@ -396,12 +396,12 @@ static NSString *audioPath = @"QLCP";
 
 - (void)removeGramophoneViewControllerCellTwo:(GramophoneViewControllerCellTwo *)gramophoneViewControllerCellTwo {
     
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"报告！" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert！" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
     
         }];
-        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             NSIndexPath  *indexPath = [self.collectionView indexPathForCell:gramophoneViewControllerCellTwo];
             [self removeCellAtidexPath:indexPath];
             [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];

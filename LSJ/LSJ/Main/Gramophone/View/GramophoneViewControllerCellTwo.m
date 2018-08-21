@@ -91,7 +91,7 @@
    
     UILabel *titleLabel = [[UILabel alloc]init];
     titleLabel.font = [UIFont systemFontOfSize:10];
-    titleLabel.text  = @"未命名";
+    titleLabel.text  = @"Unnamed";
 //    titleLabel.textColor = [UIColor lightGrayColor];
     titleLabel.alpha = .6;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -107,7 +107,7 @@
     
     UILabel *datalabel = [[UILabel alloc] init];
     datalabel.font = [UIFont systemFontOfSize:7];
-    datalabel.text = @"某月某日";
+    datalabel.text = @"- -";
 //    datalabel.textColor = WhiteColor;
     datalabel.alpha = .6;
     datalabel.textAlignment = NSTextAlignmentCenter;
@@ -208,7 +208,7 @@
     NSDate *date = [NSDate jk_dateWithString:audioModel.date format:@"yyyy-MM-dd-HH-mm-ss+0800"];
     long int day = [date jk_day];
     long int month = [date jk_month];
-    self.datalabel.text = [NSString stringWithFormat:@"%ld月%ld日",month,day];
+    self.datalabel.text = [NSString stringWithFormat:@"%ld-%ld",month,day];
     if (audioModel.password.length != 0) {
         self.lockImageView.hidden = NO;
     }

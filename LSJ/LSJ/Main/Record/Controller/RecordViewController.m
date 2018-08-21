@@ -69,7 +69,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 }
 - (void)setupUI  {
     
-    self.navigationItem.title =  @"录音";
+    self.navigationItem.title =  @"Record";
     self.view.backgroundColor = WhiteColor;
     self.audioState = AudioStateEnd;
     
@@ -152,7 +152,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void)share {
     
     //分享的标题
-    NSString *textToShare = @"我用六合留声宝典给你留言了！";
+    NSString *textToShare = @"Come and experience it ！";
     //分享的图片
     UIImage *imageToShare = [UIImage imageNamed:@"disc.png"];
     //分享的url
@@ -202,20 +202,20 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         self.voiceChangerView.frame = CGRectMake(X, Y, W, H);
     } completion:^(BOOL finished) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置密码和密码" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *unPasswordAction = [UIAlertAction actionWithTitle:@"不设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Set Password and title " message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *unPasswordAction = [UIAlertAction actionWithTitle:@"Do not set " style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                    [self saveAudioWithPassWord:nil Title:nil];
                 }];
-                UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Determine " style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         [self saveAudioWithPassWord:self.passworkTextField.text Title:self.titleTextField.text];
                 }];
         //        confirmAction.enabled = NO;
                 [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-                    textField.placeholder = @"标题";
+                    textField.placeholder = @"title";
                     self.titleTextField = textField;
                 }];
                 [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-                    textField.placeholder = @"密码";
+                    textField.placeholder = @"password";
                     self.passworkTextField = textField;
                 }];
         
@@ -465,7 +465,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void)saveAudioWithPassWord:(NSString *)password Title:(NSString *)title{
 
     if (title.length == 0) {
-        title = @"未命名";
+        title = @"Unnamed ";
     }
     if (password.length == 0) {
         // 保存元数据
@@ -489,7 +489,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
             }else {
                 [audioCache setObject:@[audioModel] forKey:KeyAudioAry];
             }
-            [self showToast:@"保存成功"];
+            [self showToast:@"Success"];
             
         }else {
             DEBUG_LOG(@"copy失败：%@",[error localizedDescription]);
@@ -516,7 +516,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
             }else {
                 [audioCache setObject:@[audioModel] forKey:KeyPassWordAudioAry];
             }
-            [self showToast:@"保存成功"];
+            [self showToast:@"Success"];
             
         }else {
             DEBUG_LOG(@"copy失败：%@",[error localizedDescription]);
@@ -532,7 +532,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void)removeAudio {
     
     
-    [self showToast:@"已放弃！"];
+    [self showToast:@"Has abandoned！"];
 }
 
 - (NSString *)fullPathAtCache:(NSString *)fileName{

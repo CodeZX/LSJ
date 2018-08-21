@@ -60,7 +60,7 @@ static NSString *audioPath = @"QLCP";
 - (void)setupUI  {
     
     self.view.backgroundColor = WhiteColor;
-    self.navigationItem.title = @"留声机";
+    self.navigationItem.title = @"Gramophone";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self  action:@selector(rightSearch:)];
     
@@ -218,8 +218,8 @@ static NSString *audioPath = @"QLCP";
     cell.stop = NO;
     
     AudioModel *model = self.dataSource[indexPath.row];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请输入密码" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Please enter the password " message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Determine " style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([model.password isEqualToString:self.passwordTextField.text]) {
            
             NSString *audioPath = [self fullPathAtDocument:model.date];
@@ -229,12 +229,12 @@ static NSString *audioPath = @"QLCP";
                 [self.player play];
                 [cell startAnimation];
             }else {
-                [self showToast:@"文件获取失败！"];
+                [self showToast:@"Failure"];
             }
         }
         
     }];
-    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
@@ -264,10 +264,10 @@ static NSString *audioPath = @"QLCP";
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         collectionHeaderView* view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:collectionViewHeaderIdentifier forIndexPath:indexPath];
         if (indexPath.section == 0) {
-            view.label.text = @"今天";
+            view.label.text = @"Today";
         } else {
             
-            view.label.text = @"其他";
+            view.label.text = @"Othe";
         }
         return view;
     }else{
@@ -296,12 +296,12 @@ static NSString *audioPath = @"QLCP";
 
 - (void)removeGramophoneViewControllerCellTwo:(GramophoneViewControllerCellTwo *)gramophoneViewControllerCellTwo {
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"报告！" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert！" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Cancel " style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         
     }];
-    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         NSIndexPath  *indexPath = [self.collectionView indexPathForCell:gramophoneViewControllerCellTwo];
         [self removeCellAtidexPath:indexPath];
         [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
