@@ -46,7 +46,7 @@
 - (void)stopPlayer {
     
     self.stop = YES;
-    self.action = NO;
+//    self.action = NO;
     
     
 }
@@ -230,7 +230,11 @@
         self.trayImg.transform = endAngle;
     } completion:^(BOOL finished) {
         if (!self.stop) {
-            angle += 2; [self action];
+            angle += 2;
+            [self action];
+            self.action = YES;
+        }else {
+            self.action = NO;
         }
     }];
     

@@ -126,10 +126,10 @@
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    int baseLine = 250;
+    int baseLine = self.frame.size.height/2 + 50;
     static int multiplier = 1;
     int maxLengthOfWave = 45;
-    int maxValueOfMeter = 400;
+    int maxValueOfMeter = 500;
     int yHeights[6];
     float segement[6] = {0.05, 0.2, 0.35, 0.25, 0.1, 0.05};
     

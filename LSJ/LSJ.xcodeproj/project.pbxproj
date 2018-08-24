@@ -102,6 +102,12 @@
 		3C10091D2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091C2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m */; };
 		3C1009202126C63600940BFD /* VoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091F2126C63500940BFD /* VoiceModel.m */; };
 		3C100945212A5E4B00940BFD /* 关 闭-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C100944212A5E4B00940BFD /* 关 闭-2.png */; };
+		3C7AA8A7212FB5E500E2BDC7 /* btn_save1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A1212FB5E400E2BDC7 /* btn_save1@3x.png */; };
+		3C7AA8A8212FB5E500E2BDC7 /* btn_anandon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A2212FB5E400E2BDC7 /* btn_anandon@3x.png */; };
+		3C7AA8A9212FB5E500E2BDC7 /* btn_save1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A3212FB5E400E2BDC7 /* btn_save1.png */; };
+		3C7AA8AA212FB5E500E2BDC7 /* btn_anandon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A4212FB5E400E2BDC7 /* btn_anandon@2x.png */; };
+		3C7AA8AB212FB5E500E2BDC7 /* btn_save1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A5212FB5E400E2BDC7 /* btn_save1@2x.png */; };
+		3C7AA8AC212FB5E500E2BDC7 /* btn_anandon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A6212FB5E500E2BDC7 /* btn_anandon.png */; };
 		EDABAC70E6601ECA45EBAD56 /* libPods-LSJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C2D43D7186277E2E28166 /* libPods-LSJ.a */; };
 /* End PBXBuildFile section */
 
@@ -244,6 +250,12 @@
 		3C10091F2126C63500940BFD /* VoiceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceModel.m; sourceTree = "<group>"; };
 		3C1009212126CA9B00940BFD /* CommonEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
 		3C100944212A5E4B00940BFD /* 关 闭-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关 闭-2.png"; sourceTree = "<group>"; };
+		3C7AA8A1212FB5E400E2BDC7 /* btn_save1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_save1@3x.png"; sourceTree = "<group>"; };
+		3C7AA8A2212FB5E400E2BDC7 /* btn_anandon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_anandon@3x.png"; sourceTree = "<group>"; };
+		3C7AA8A3212FB5E400E2BDC7 /* btn_save1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_save1.png; sourceTree = "<group>"; };
+		3C7AA8A4212FB5E400E2BDC7 /* btn_anandon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_anandon@2x.png"; sourceTree = "<group>"; };
+		3C7AA8A5212FB5E400E2BDC7 /* btn_save1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_save1@2x.png"; sourceTree = "<group>"; };
+		3C7AA8A6212FB5E500E2BDC7 /* btn_anandon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_anandon.png; sourceTree = "<group>"; };
 		848C2D43D7186277E2E28166 /* libPods-LSJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20184D360B63A3435505D7B /* Pods-LSJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSJ/Pods-LSJ.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3B9B713D18619F1D0F346C /* Pods-LSJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSJ/Pods-LSJ.release.xcconfig"; sourceTree = "<group>"; };
@@ -551,6 +563,12 @@
 		3C1008BF2126A64100940BFD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3C7AA8A6212FB5E500E2BDC7 /* btn_anandon.png */,
+				3C7AA8A4212FB5E400E2BDC7 /* btn_anandon@2x.png */,
+				3C7AA8A2212FB5E400E2BDC7 /* btn_anandon@3x.png */,
+				3C7AA8A3212FB5E400E2BDC7 /* btn_save1.png */,
+				3C7AA8A5212FB5E400E2BDC7 /* btn_save1@2x.png */,
+				3C7AA8A1212FB5E400E2BDC7 /* btn_save1@3x.png */,
 				3C100944212A5E4B00940BFD /* 关 闭-2.png */,
 				3C1008C02126A64100940BFD /* btn_stop@3x.png */,
 				3C1008C12126A64100940BFD /* disc@2x.png */,
@@ -746,10 +764,14 @@
 				3C10089721269C6900940BFD /* mask@3x.png in Resources */,
 				3C1008D22126A64100940BFD /* disc@3x.png in Resources */,
 				3C1008F72126AC9500940BFD /* checkMark@2x.png in Resources */,
+				3C7AA8AA212FB5E500E2BDC7 /* btn_anandon@2x.png in Resources */,
+				3C7AA8A9212FB5E500E2BDC7 /* btn_save1.png in Resources */,
 				3C10088D21269C6900940BFD /* GramophoneTableViewCell.xib in Resources */,
 				3C1007EE212663D500940BFD /* LaunchScreen.storyboard in Resources */,
 				3C10089A21269C6900940BFD /* mask@2x.png in Resources */,
+				3C7AA8A8212FB5E500E2BDC7 /* btn_anandon@3x.png in Resources */,
 				3C1008D32126A64100940BFD /* btn_stop@2x.png in Resources */,
+				3C7AA8A7212FB5E500E2BDC7 /* btn_save1@3x.png in Resources */,
 				3C10089421269C6900940BFD /* icon_phonograph.png in Resources */,
 				3C10089021269C6900940BFD /* GramophoneViewControllerCellTwo.xib in Resources */,
 				3C1008A521269C6900940BFD /* icon_styli@2x.png in Resources */,
@@ -761,6 +783,7 @@
 				3C1008CF2126A64100940BFD /* btn_stop@3x.png in Resources */,
 				3C1008A921269C6900940BFD /* icon_styli.png in Resources */,
 				3C1008A221269C6900940BFD /* icon_delete@2x.png in Resources */,
+				3C7AA8AB212FB5E500E2BDC7 /* btn_save1@2x.png in Resources */,
 				3C10089F21269C6900940BFD /* back ground.png in Resources */,
 				3C1009132126B1AE00940BFD /* suo@3x.png in Resources */,
 				3C1008D52126A64100940BFD /* stylus@2x.png in Resources */,
@@ -779,6 +802,7 @@
 				3C10089821269C6900940BFD /* btn_save@3x.png in Resources */,
 				3C1008D62126A64100940BFD /* stylus@3x.png in Resources */,
 				3C1008A421269C6900940BFD /* btn_close@3x.png in Resources */,
+				3C7AA8AC212FB5E500E2BDC7 /* btn_anandon.png in Resources */,
 				3C1008F32126AC9500940BFD /* info@2x.png in Resources */,
 				3C10089621269C6900940BFD /* back ground@3x.png in Resources */,
 				3C1008D02126A64100940BFD /* disc@2x.png in Resources */,

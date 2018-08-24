@@ -85,7 +85,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         make.bottom.equalTo(self.view);
     }];
     
-    self.recordView = [[FXRecordArcView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 320) /2, 0, SCREEN_WIDTH, 320)];
+    self.recordView = [[FXRecordArcView alloc] initWithFrame:CGRectMake(40 , 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT/2 )];
+//    self.recordView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.recordView];
     self.recordView.delegate = self;
     
@@ -95,7 +96,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 //    saveBtn.backgroundColor =  RandomColor;
     //    [Btn setTitle:@"Btn" forState:UIControlStateNormal];
     //    [Btn setTitle:@"Btn" forState:UIControlStateSelected];
-    [saveBtn setImage:[UIImage imageNamed:@"btn_save"] forState:UIControlStateNormal];
+    [saveBtn setImage:[UIImage imageNamed:@"btn_save1"] forState:UIControlStateNormal];
     [saveBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
     [saveBtn addTarget:self action:@selector(saveBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:saveBtn];
@@ -111,7 +112,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 //    cancelBtn.backgroundColor =  RandomColor;
     //    [Btn setTitle:@"Btn" forState:UIControlStateNormal];
     //    [Btn setTitle:@"Btn" forState:UIControlStateSelected];
-    [cancelBtn setImage:[UIImage imageNamed:@"btn_close@2x"] forState:UIControlStateNormal];
+    [cancelBtn setImage:[UIImage imageNamed:@"btn_anandon"] forState:UIControlStateNormal];
     [cancelBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
     [cancelBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelBtn];
@@ -305,10 +306,10 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     
     
     [self.saveBtn mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view).offset(150);
+        make.centerX.equalTo(self.view).offset(SCREEN_WIDTH/4 + 20);
     }];
     [self.cancelBtn mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view).offset(-150);
+        make.centerX.equalTo(self.view).offset(-SCREEN_WIDTH/4- 20);
     }];
     [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.saveBtn.alpha = 1;

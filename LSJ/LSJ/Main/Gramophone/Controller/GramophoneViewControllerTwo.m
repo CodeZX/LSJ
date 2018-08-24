@@ -259,9 +259,10 @@ static NSString *audioPath = @"QLCP";
 //        self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:audioPath] error:nil];
 //        self.player.delegate = self;
 //        [self.player play];
+        [self createSoundTouchOperationWithPath:audioPath audio:model];
         [cell startAnimation];
         
-        [self createSoundTouchOperationWithPath:audioPath audio:model];
+       
     }else {
         [self showToast:@"文件获取失败！"];
     }
