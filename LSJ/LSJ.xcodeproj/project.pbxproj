@@ -102,6 +102,16 @@
 		3C10091D2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091C2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m */; };
 		3C1009202126C63600940BFD /* VoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10091F2126C63500940BFD /* VoiceModel.m */; };
 		3C100945212A5E4B00940BFD /* 关 闭-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C100944212A5E4B00940BFD /* 关 闭-2.png */; };
+		3C1631AE21394745006BC00C /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1631A321394745006BC00C /* back@2x.png */; };
+		3C1631AF21394745006BC00C /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1631A521394745006BC00C /* back@3x.png */; };
+		3C1631B021394745006BC00C /* TNGWebNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631A821394745006BC00C /* TNGWebNavigationViewController.m */; };
+		3C1631B121394745006BC00C /* TNGURLFailture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631A921394745006BC00C /* TNGURLFailture.m */; };
+		3C1631B221394745006BC00C /* TNGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631AA21394745006BC00C /* TNGWebViewController.m */; };
+		3C1631B321394745006BC00C /* UIImage+DSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631AB21394745006BC00C /* UIImage+DSAdd.m */; };
+		3C1631B421394745006BC00C /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1631AD21394745006BC00C /* back.png */; };
+		3C1631B621394A50006BC00C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1631B521394A50006BC00C /* WebKit.framework */; };
+		3C1631B821394AF3006BC00C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1631B721394AF2006BC00C /* AdSupport.framework */; };
+		3C1631BC213952DC006BC00C /* DSLaunchAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631BB213952DC006BC00C /* DSLaunchAnimateViewController.m */; };
 		3C7AA8A7212FB5E500E2BDC7 /* btn_save1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A1212FB5E400E2BDC7 /* btn_save1@3x.png */; };
 		3C7AA8A8212FB5E500E2BDC7 /* btn_anandon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A2212FB5E400E2BDC7 /* btn_anandon@3x.png */; };
 		3C7AA8A9212FB5E500E2BDC7 /* btn_save1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AA8A3212FB5E400E2BDC7 /* btn_save1.png */; };
@@ -250,6 +260,22 @@
 		3C10091F2126C63500940BFD /* VoiceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceModel.m; sourceTree = "<group>"; };
 		3C1009212126CA9B00940BFD /* CommonEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
 		3C100944212A5E4B00940BFD /* 关 闭-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关 闭-2.png"; sourceTree = "<group>"; };
+		3C1631A121394680006BC00C /* LSJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LSJ.entitlements; sourceTree = "<group>"; };
+		3C1631A321394745006BC00C /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		3C1631A421394745006BC00C /* TNGURLFailture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNGURLFailture.h; sourceTree = "<group>"; };
+		3C1631A521394745006BC00C /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		3C1631A621394745006BC00C /* UIImage+DSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSAdd.h"; sourceTree = "<group>"; };
+		3C1631A721394745006BC00C /* TNGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNGWebViewController.h; sourceTree = "<group>"; };
+		3C1631A821394745006BC00C /* TNGWebNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNGWebNavigationViewController.m; sourceTree = "<group>"; };
+		3C1631A921394745006BC00C /* TNGURLFailture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNGURLFailture.m; sourceTree = "<group>"; };
+		3C1631AA21394745006BC00C /* TNGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNGWebViewController.m; sourceTree = "<group>"; };
+		3C1631AB21394745006BC00C /* UIImage+DSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSAdd.m"; sourceTree = "<group>"; };
+		3C1631AC21394745006BC00C /* TNGWebNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNGWebNavigationViewController.h; sourceTree = "<group>"; };
+		3C1631AD21394745006BC00C /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		3C1631B521394A50006BC00C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3C1631B721394AF2006BC00C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3C1631BA213952DC006BC00C /* DSLaunchAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLaunchAnimateViewController.h; sourceTree = "<group>"; };
+		3C1631BB213952DC006BC00C /* DSLaunchAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLaunchAnimateViewController.m; sourceTree = "<group>"; };
 		3C7AA8A1212FB5E400E2BDC7 /* btn_save1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_save1@3x.png"; sourceTree = "<group>"; };
 		3C7AA8A2212FB5E400E2BDC7 /* btn_anandon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_anandon@3x.png"; sourceTree = "<group>"; };
 		3C7AA8A3212FB5E400E2BDC7 /* btn_save1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_save1.png; sourceTree = "<group>"; };
@@ -266,6 +292,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1631B821394AF3006BC00C /* AdSupport.framework in Frameworks */,
+				3C1631B621394A50006BC00C /* WebKit.framework in Frameworks */,
 				EDABAC70E6601ECA45EBAD56 /* libPods-LSJ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +304,8 @@
 		0AA2C6CAC4906B705551779F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C1631B721394AF2006BC00C /* AdSupport.framework */,
+				3C1631B521394A50006BC00C /* WebKit.framework */,
 				848C2D43D7186277E2E28166 /* libPods-LSJ.a */,
 			);
 			name = Frameworks;
@@ -302,6 +332,7 @@
 		3C1007E0212663D400940BFD /* LSJ */ = {
 			isa = PBXGroup;
 			children = (
+				3C1631A121394680006BC00C /* LSJ.entitlements */,
 				3C1007FA2126699900940BFD /* soundTouch */,
 				3C1007F92126652500940BFD /* Main */,
 				3C1007F8212664F200940BFD /* Resource */,
@@ -337,6 +368,8 @@
 		3C1007F92126652500940BFD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3C1631B9213952B7006BC00C /* LaunchView */,
+				3C1631A221394744006BC00C /* WebView */,
 				3C1008D92126AA1500940BFD /* Othe */,
 				3C10082E2126990100940BFD /* Basic */,
 				3C1008B52126A64100940BFD /* Record */,
@@ -681,6 +714,34 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		3C1631A221394744006BC00C /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3C1631A321394745006BC00C /* back@2x.png */,
+				3C1631A421394745006BC00C /* TNGURLFailture.h */,
+				3C1631A521394745006BC00C /* back@3x.png */,
+				3C1631A621394745006BC00C /* UIImage+DSAdd.h */,
+				3C1631A721394745006BC00C /* TNGWebViewController.h */,
+				3C1631A821394745006BC00C /* TNGWebNavigationViewController.m */,
+				3C1631A921394745006BC00C /* TNGURLFailture.m */,
+				3C1631AA21394745006BC00C /* TNGWebViewController.m */,
+				3C1631AB21394745006BC00C /* UIImage+DSAdd.m */,
+				3C1631AC21394745006BC00C /* TNGWebNavigationViewController.h */,
+				3C1631AD21394745006BC00C /* back.png */,
+			);
+			name = WebView;
+			path = ../../../../CFB/CFB/CFB/Mian/WebView;
+			sourceTree = "<group>";
+		};
+		3C1631B9213952B7006BC00C /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				3C1631BA213952DC006BC00C /* DSLaunchAnimateViewController.h */,
+				3C1631BB213952DC006BC00C /* DSLaunchAnimateViewController.m */,
+			);
+			path = LaunchView;
+			sourceTree = "<group>";
+		};
 		81E5294B9C718C2176DC4822 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +784,14 @@
 				TargetAttributes = {
 					3C1007DD212663D400940BFD = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -789,6 +858,7 @@
 				3C1008D52126A64100940BFD /* stylus@2x.png in Resources */,
 				3C10089B21269C6900940BFD /* back ground@2x.png in Resources */,
 				3C1009112126B1AE00940BFD /* lock_nor@3x.png in Resources */,
+				3C1631AF21394745006BC00C /* back@3x.png in Resources */,
 				3C1009142126B1AE00940BFD /* suo.png in Resources */,
 				3C1008A821269C6900940BFD /* mask.png in Resources */,
 				3C1008F62126AC9500940BFD /* crossMark.png in Resources */,
@@ -806,9 +876,11 @@
 				3C1008F32126AC9500940BFD /* info@2x.png in Resources */,
 				3C10089621269C6900940BFD /* back ground@3x.png in Resources */,
 				3C1008D02126A64100940BFD /* disc@2x.png in Resources */,
+				3C1631AE21394745006BC00C /* back@2x.png in Resources */,
 				3C1008F52126AC9500940BFD /* crossMark@2x.png in Resources */,
 				3C10089321269C6900940BFD /* bg1@2x.png in Resources */,
 				3C1008D42126A64100940BFD /* btn_stop.png in Resources */,
+				3C1631B421394745006BC00C /* back.png in Resources */,
 				3C1007E9212663D400940BFD /* Main.storyboard in Resources */,
 				3C10089921269C6900940BFD /* btn_save@2x.png in Resources */,
 				3C10089E21269C6900940BFD /* icon_delete@3x.png in Resources */,
@@ -871,11 +943,13 @@
 				3C1008272126699900940BFD /* PeakFinder.cpp in Sources */,
 				3C10091D2126BC2400940BFD /* LSJVoiceChangerCollectionViewCell.m in Sources */,
 				3C10088B21269C6900940BFD /* GramophoneViewControllerTwo.m in Sources */,
+				3C1631BC213952DC006BC00C /* DSLaunchAnimateViewController.m in Sources */,
 				3C1008AE21269F4B00940BFD /* BasicViewController.m in Sources */,
 				3C1008FD2126AC9500940BFD /* UIViewController+HUD.m in Sources */,
 				3C1008212126699900940BFD /* BPMDetect.cpp in Sources */,
 				3C1008CC2126A64100940BFD /* RecordViewController.m in Sources */,
 				3C1008262126699900940BFD /* cpu_detect_x86.cpp in Sources */,
+				3C1631B221394745006BC00C /* TNGWebViewController.m in Sources */,
 				3C1008202126699900940BFD /* RateTransposer.cpp in Sources */,
 				3C1009202126C63600940BFD /* VoiceModel.m in Sources */,
 				3C1008CE2126A64100940BFD /* FXRecordArcView.m in Sources */,
@@ -884,6 +958,7 @@
 				3C10082B2126699900940BFD /* DotimeManage.m in Sources */,
 				3C10082D2126699900940BFD /* WaveHeader.cpp in Sources */,
 				3C10082C2126699900940BFD /* Recorder.m in Sources */,
+				3C1631B121394745006BC00C /* TNGURLFailture.m in Sources */,
 				3C1008CD2126A64100940BFD /* AudioModel.m in Sources */,
 				3C10091A2126B94B00940BFD /* LSJVoiceChangerView.m in Sources */,
 				3C1008282126699900940BFD /* AAFilter.cpp in Sources */,
@@ -899,7 +974,9 @@
 				3C1007E3212663D400940BFD /* AppDelegate.mm in Sources */,
 				3C10088E21269C6900940BFD /* collectionHeaderView.m in Sources */,
 				3C1008242126699900940BFD /* FIFOSampleBuffer.cpp in Sources */,
+				3C1631B321394745006BC00C /* UIImage+DSAdd.m in Sources */,
 				3C1008312126994700940BFD /* BasicTabBarController.m in Sources */,
+				3C1631B021394745006BC00C /* TNGWebNavigationViewController.m in Sources */,
 				3C1008FB2126AC9500940BFD /* TKProgressBarView.m in Sources */,
 				3C10081F2126699900940BFD /* TDStretch.cpp in Sources */,
 				3C1008FC2126AC9500940BFD /* UIView+TKCategory.m in Sources */,
@@ -1044,6 +1121,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LSJ/LSJ.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JT8233YUV4;
@@ -1067,6 +1145,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LSJ/LSJ.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JT8233YUV4;

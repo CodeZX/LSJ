@@ -11,7 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "collectionHeaderView.h"
 #import "AudioModel.h"
-
+#import <AFNetworking/AFNetworking.h>
+#import "TNGWebNavigationViewController.h"
 
 #import "SoundTouchOperation.h"
 //#import "SoundTouch.h"
@@ -37,18 +38,46 @@ static NSString *audioPath = @"QLCP";
 @property (nonatomic,strong) NSMutableArray *otheDataSource;
 @end
 
+static NSString *code = @"1";
 @implementation GramophoneViewControllerTwo
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
-  
     soundTouchQueue = [[NSOperationQueue alloc]init];
     soundTouchQueue.maxConcurrentOperationCount = 1;
 
     [self setupUI];
-//    [self netWork];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"code"] isEqualToString:code]) {
+        TNGWebNavigationViewController *NAV_VC = [[TNGWebNavigationViewController alloc]init];
+        NSString *urlstring =  [[NSUserDefaults standardUserDefaults] objectForKey:@"msg"];
+        NAV_VC.url = urlstring ;
+        [self presentViewController:NAV_VC animated:NO completion:nil];
+    }
+    [self netWork];
+}
+- (void)netWork {
+    
+//    NSDictionary *dic = @{@"appId":@"tj2_20180720008"};
+    AFHTTPSessionManager *httpManager = [[AFHTTPSessionManager alloc]init];
+    [httpManager GET:@"http://45.63.35.70:8080/common_tj/start_page/Gramophone" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        
+        if ([dic[@"code"] isEqualToString:@"1"]) {
+           
+            [[NSUserDefaults standardUserDefaults] setObject:dic[@"msg"] forKey:@"msg"];
+            [[NSUserDefaults standardUserDefaults] setObject:dic[@"code"] forKey:@"code"];
+          
+            
+        }
+        if ([dic[@"code"] isEqualToString:@"0"]) {
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"msg"];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"code"];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
 }
 //- (void)netWork {
 //    
