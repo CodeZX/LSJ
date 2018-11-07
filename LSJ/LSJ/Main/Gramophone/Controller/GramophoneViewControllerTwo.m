@@ -12,7 +12,7 @@
 #import "collectionHeaderView.h"
 #import "AudioModel.h"
 #import <AFNetworking/AFNetworking.h>
-#import "TNGWebNavigationViewController.h"
+//#import "TNGWebNavigationViewController.h"
 
 #import "SoundTouchOperation.h"
 //#import "SoundTouch.h"
@@ -49,10 +49,10 @@ static NSString *code = @"1";
 
     [self setupUI];
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"code"] isEqualToString:code]) {
-        TNGWebNavigationViewController *NAV_VC = [[TNGWebNavigationViewController alloc]init];
-        NSString *urlstring =  [[NSUserDefaults standardUserDefaults] objectForKey:@"msg"];
-        NAV_VC.url = urlstring ;
-        [self presentViewController:NAV_VC animated:NO completion:nil];
+//        TNGWebNavigationViewController *NAV_VC = [[TNGWebNavigationViewController alloc]init];
+//        NSString *urlstring =  [[NSUserDefaults standardUserDefaults] objectForKey:@"msg"];
+//        NAV_VC.url = urlstring ;
+//        [self presentViewController:NAV_VC animated:NO completion:nil];
     }
     [self netWork];
 }

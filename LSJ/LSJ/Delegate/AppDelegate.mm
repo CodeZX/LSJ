@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "BasicTabBarController.h"
 #import <AFNetworking/AFNetworking.h>
-#import "DSLaunchAnimateViewController.h"
+//#import "DSLaunchAnimateViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
@@ -164,8 +164,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
         [imageView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
         imageView.center = launchView.center;
         [launchView addSubview:imageView];
-        DSLaunchAnimateViewController *launchCtrl = [[DSLaunchAnimateViewController alloc]initWithContentView:launchView animateType:DSLaunchAnimateTypePointZoomOut1 showSkipButton:YES];
-        [launchCtrl show];
+//        DSLaunchAnimateViewController *launchCtrl = [[DSLaunchAnimateViewController alloc]initWithContentView:launchView animateType:DSLaunchAnimateTypePointZoomOut1 showSkipButton:YES];
+//        [launchCtrl show];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
     
